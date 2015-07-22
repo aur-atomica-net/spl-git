@@ -6,7 +6,7 @@ _kernel_version=$(pacman -Q linux | awk '{print $2}')
 _gitname=spl
 
 pkgname="spl-git"
-pkgver=_4.1.2_2
+pkgver=0.6.4.r14.g9eb361a_4.1.2_2
 pkgrel=1
 license=('GPL')
 pkgdesc="Solaris Porting Layer kernel modules."

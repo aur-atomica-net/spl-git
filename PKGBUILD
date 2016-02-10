@@ -2,6 +2,7 @@
 # Contributor: Jesus Alvarez <jeezusjr at gmail dot com>
 # Contributor: Kyle Fuller <inbox at kylefuller dot co dot uk>
 
+_spl_utils_version=$(pacman -Q spl-utils-git | awk '{print $2}')
 _kernel_version=$(pacman -Q linux | awk '{print $2}')
 _gitname=spl
 
@@ -10,7 +11,7 @@ pkgver=0.6.4.r14.g9eb361a_4.1.2_2
 pkgrel=1
 license=('GPL')
 pkgdesc="Solaris Porting Layer kernel modules."
-depends=("spl-utils-git" "linux=${_kernel_version}")
+depends=("spl-utils-git=${_spl_utils_version}" "linux=${_kernel_version}")
 makedepends=("git" "linux-headers=${_kernel_version}")
 arch=("i686" "x86_64")
 url="http://zfsonlinux.org/"

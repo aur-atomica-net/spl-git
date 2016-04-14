@@ -2,7 +2,7 @@
 # Contributor: Jesus Alvarez <jeezusjr at gmail dot com>
 # Contributor: Kyle Fuller <inbox at kylefuller dot co dot uk>
 
-_spl_utils_git_version=$(pacman -Sys '^spl-utils-git$' | grep spl-utils-git | awk '{print $2}')
+_spl_utils_git_version=$(pacman -Ss '^spl-utils-git$' | grep spl-utils-git | awk '{print $2}')
 _kernel_version=$(pacman -Q linux | awk '{print $2}')
 _kernel_module_version=$(pacman -Ql linux | grep -oE '[0-9]+\.[0-9]+\.[0-9]+-[0-9]+' | head -n1)
 _gitname="spl"

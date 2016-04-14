@@ -41,7 +41,7 @@ build() {
     ./configure --prefix=/usr \
                 --libdir=/usr/lib \
                 --sbindir=/usr/bin \
-                --with-linux=/usr/lib/modules/${_kernel_version}-ARCH/build \
+                --with-linux=/usr/lib/modules/${_kernel_module_version}-ARCH/build \
                 --with-config=kernel \
                 ${_at_enable}
 

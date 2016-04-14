@@ -53,5 +53,5 @@ package() {
     make DESTDIR="${pkgdir}" install
 
     mv "${pkgdir}/lib" "${pkgdir}/usr/"
-    sed -i "s+${srcdir}++" ${pkgdir}/usr/src/spl-*/${_kernel_version}-ARCH/Module.symvers
+    sed -i "s+${srcdir}++" ${pkgdir}/usr/src/spl-*/${_kernel_module_version}-ARCH/Module.symvers
 }
